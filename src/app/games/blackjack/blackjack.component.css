@@ -1,0 +1,45 @@
+.btn{
+    font-size: 15px;
+    padding: 12px 22px;
+    background-color: purple;
+    color: white;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.btn:hover{
+    color: lightgray;
+}
+
+div.container{
+    /* background-color: rgb(19, 165, 32); */
+    background-image: url("../../../assets/Greenfelt2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 500px;
+}
+div.play{
+    border: 5px solid black ;
+    border-radius: 20px;
+    padding: 5px;
+    margin: 3px 3px;
+}
+
+span{
+    color: black;
+}
+
+div{
+    color: black;
+}
+
+img{
+    min-width: 50px;
+    max-width: 100px;
+    background-color: white;
+    border-radius: 7px
+}
+p{
+    margin: 15px;
+    font-size: 1.2em;
+}

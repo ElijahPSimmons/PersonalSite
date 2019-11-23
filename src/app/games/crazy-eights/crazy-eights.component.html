@@ -1,0 +1,72 @@
+<div class="bg2 container" *ngIf="!rulesPageShown">
+    <div class="row">
+      <button class="btn" type="button" (click)="rulesPageShown = !rulesPageShown">Rules</button>
+      <div class="text-center">
+        <button class="btn test" *ngIf="gameDone" (click)="newGame()">New Game</button>
+        <button class="btn" *ngIf="!started" type="button" (click)="startGame()">Start</button>
+      </div>
+      <div [hidden]="!started" class="text-center">
+        <span *ngFor="let card of opponentHand">
+          <img class="card-size" src="../../../assets/cardback.jfif" alt="">
+        </span>
+      </div>
+      <div [hidden]="!started" class="text-center">
+        Opponent hand size: {{ opponentHand.length }}
+      </div>
+    </div>
+    <div class="row text-center" [hidden]="!started">
+      <span>
+        <h4>Draw: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Play pile:</h4>
+      </span>
+      <span >
+        <a *ngIf="!gameDone" [hidden]="cardsUsed >= 52" class="cursor" (click)="drawCard('Player')">
+          <img class="card-size shade" src="../../../assets/cardback.jfif" alt="">
+        </a>
+        <img *ngIf="cardInPlay" class="card-size card-back-color" [src]=cardInPlay.img alt="">
+        <span *ngIf="wildEightPlayed">
+        <a (click)="checkCard(1)">
+          <img class="suits" src="../../../assets/Heart.png" alt="">
+        </a>
+        <a (click)="checkCard(2)">
+          <img class="suits" src="../../../assets/ClubSuit.jpg" alt="">
+        </a>
+        <a (click)="checkCard(3)">
+          <img class="suits" src="../../../assets/Diamond.png" alt="">
+        </a>
+        <a (click)="checkCard(0)">
+          <img class="suits" src="../../../assets/Spade.png" alt="">
+        </a>
+      </span>
+      </span>
+    </div>
+    <br>
+    <br>
+    <div class="row text-center" *ngIf="!wildEightPlayed" [hidden]="gameDone">
+      <span *ngFor="let card of playerHand">
+        <a class="cursor" (click)="playCard(card)">
+          <img class="card-size card-back-color" [src]=card.img alt="">
+        </a>
+      </span>
+    </div>
+    <div class="row text-center" *ngIf="wildEightPlayed || gameDone">
+        <span *ngFor="let card of playerHand">
+          <a class="cursor disable" (click)="playCard(card)">
+            <img class="card-size card-back-color" [src]=card.img alt="">
+          </a>
+        </span>
+      </div>
+  
+  </div>
+  
+  <div class="bg2 container" *ngIf="rulesPageShown">
+    <button class="btn" type="button" (click)="rulesPageShown = !rulesPageShown">Back</button>
+    <p class="text-justified">
+      Each player is dealt seven cards. The remaining cards are placed face down in the center of the table, forming a draw pile.
+      The top card of the draw pile is turned face up to start the discard pile next to it. First player adds to the discard
+      pile by playing one card that matches the top card on the discard pile either by suit or by rank (i.e. 6, jack, ace,
+      etc.). A player who cannot match the top card on the discard pile by suit or rank must draw cards until he can play one.
+      When the draw pile is empty, a player who cannot add to the discard pile passes his turn. All eights are wild and can
+      be played on any card during a player's turn. When a player discards an eight, he chooses which suit is now in play.
+      The next player must play either a card of that suit or another eight. The first player to discard all of his cards wins.
+    </p>
+  </div>

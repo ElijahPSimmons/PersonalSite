@@ -1,0 +1,44 @@
+<div class="bg" *ngIf="!playingGame">
+    <div class="container">
+      <div class="row">
+        <h2>Here are some games to try:</h2>
+        <ul>
+          <li>
+            <a class="color" routerLink="blackjack">
+              <h3>Blackjack</h3>
+            </a>
+          </li>
+          <li>
+            <a class="color" routerLink="crazy8s">
+              <h3>Crazy Eights</h3>
+            </a>
+          </li>
+          <li>
+            <a class="color" (click)="game('othello')">
+              <h3>Othello</h3>
+            </a>
+          </li>
+          <li>
+            <a class="color" (click)="game('snake')">
+              <h3>Snake</h3>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+  <div *ngIf="playingOthello">
+    <button class="btn" (click)="game('othello')">Back</button>
+  </div>
+  <div *ngIf="playingOthello" class="embed-responsive embed-responsive-16by9">
+    <iframe class="embed-responsive-item" src="http://bideowego-othello.surge.sh/"></iframe>
+  </div>
+  
+  <div *ngIf="playingSnake">
+    <button class="btn" (click)="game('snake')">Back</button>
+    <h3>For best result, turn scroll lock on while playing</h3>
+  </div>
+  <div *ngIf="playingSnake" class="embed-responsive embed-responsive-16by9">
+    <iframe class="embed-responsive-item" src="https://samirhodzic.github.io/ngx-snake/"></iframe>
+  </div>

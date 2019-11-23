@@ -1,0 +1,43 @@
+.carousel-caption{
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%)
+}
+.btn{
+    font-size: 15px;
+    padding: 12px 22px;
+    background-color: purple;
+    border: 2px solid #FFF
+}
+.btn:hover{
+    color: lightgray;
+}
+
+@media (max-width:600){
+    .carousel-caption{
+        display: none;
+    }
+    #icon{
+        max-width: 150px;
+    }
+    h2{
+        font-size: 80%;
+    }
+}
+
+#ngIcon{
+    max-width: 200px;
+    margin: 1% auto;
+    width: 150px;
+}
+
+.container{
+    margin: 4% auto;
+}
+
+footer {
+    width: 100%;
+    background-color: purple;
+    padding: 3%;
+    color: white;
+}
