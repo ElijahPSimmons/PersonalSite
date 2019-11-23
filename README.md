@@ -1,31 +1,11 @@
 # PersonalSite
-<<<<<<< HEAD
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.2.
+Personal website that I created to test my skills in Angual Typescript after a couple of weeks of training with it. This was to push myself in a language and a framework I was unfamiliar with in order to learn it in my own time.
 
-## Development server
+This app uses node_modules with bootstrap 3.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+# What I Learned
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-=======
-Website that I designed myself to learn more Angular and TypeScript
->>>>>>> 2c71a0ca1d322eb0ebef0766da9ce9e36cfb6ce4
+* How to connect components together and do styling of a website.
+* Create a couple of basic games and understand how to connect a website to another site.
+* Learn to use the Angular framework as well as learn to code in Typescript.
